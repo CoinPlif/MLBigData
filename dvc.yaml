@@ -1,0 +1,40 @@
+stages:
+  train_v1:
+    cmd: python train.py
+    deps:
+      - train.py
+      - utils.py
+      - params.yaml
+      - ai-vs-human-generated-dataset-hw/
+    outs: 
+      - logs/artifacts/init_model/model_init.pth
+    metrics: 
+      - logs/artifacts/init_model/metrics_v1.json
+    params:
+      - train.exp_name
+      - train.train_dir
+      - train.test_dir
+      - train.epochs
+      - train.batch_size
+      - train.learning_rate
+
+  continue_train:
+    cmd: python continue_train.py
+    deps:
+      - logs/artifacts/init_model/model_init.pth  
+      - ai-vs-human-generated-dataset-hw/   
+      - continue_train.py
+      - utils.py
+      - params.yaml
+    outs:
+      - logs/artifacts/continue_train/model_v2.pth
+    metrics:
+      - logs/artifacts/continue_train/metrics_v2.json
+    params: 
+      - continue_train.prev_weights
+      - continue_train.train_dir
+      - continue_train.test_dir
+      - continue_train.batch_size
+      - continue_train.epochs_to_add
+      - continue_train.start_epoch
+      - continue_train.learning_rate

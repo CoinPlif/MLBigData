@@ -1,4 +1,8 @@
 ai-vs-human-generated-dataset-hw/*
 .ipynb_checkpoints
 .DS_store
-/ai-vs-human-generated-dataset-hw
+logs/*
+__pycache__
+minio
+dvc.lock
+ai-vs-human-generated-dataset-hw.dvc
