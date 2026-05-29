@@ -1,0 +1,6 @@
+outs:
+- md5: 2ef0b463c4247c901dbb474b5ec37a8f.dir
+  size: 1150872917
+  nfiles: 19991
+  hash: md5
+  path: ai-vs-human-generated-dataset-hw

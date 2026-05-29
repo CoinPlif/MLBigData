@@ -1,3 +1,4 @@
-ai-vs-human-generated-dataset*
+ai-vs-human-generated-dataset-hw/*
 .ipynb_checkpoints
 .DS_store
+/ai-vs-human-generated-dataset-hw
