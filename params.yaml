@@ -1,7 +1,7 @@
 train:
   exp_name: init_model
-  train_dir: ai-vs-human-generated-dataset-hw/Train_1  
-  test_dir: ai-vs-human-generated-dataset-hw/Test_1  
+  train_dir: ai-vs-human-generated-dataset/Train_1  
+  test_dir: ai-vs-human-generated-dataset/Test_1  
   epochs: 10
   batch_size: 32
   learning_rate: 0.001
@@ -9,8 +9,8 @@ train:
 continue_train:
   exp_name: continue_train
   prev_weights: logs/artifacts/init_model/model_init.pth      
-  train_dir: ai-vs-human-generated-dataset-hw/Train_2  
-  test_dir: ai-vs-human-generated-dataset-hw/Test_2  
+  train_dir: ai-vs-human-generated-dataset/Train_2  
+  test_dir: ai-vs-human-generated-dataset/Test_2  
   batch_size: 32       
   epochs_to_add: 5                       
   start_epoch: 11                        

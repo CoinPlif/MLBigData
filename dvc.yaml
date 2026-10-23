@@ -5,7 +5,7 @@ stages:
       - train.py
       - utils.py
       - params.yaml
-      - ai-vs-human-generated-dataset-hw/
+      - ai-vs-human-generated-dataset/
     outs: 
       - logs/artifacts/init_model/model_init.pth
     metrics: 
@@ -22,7 +22,7 @@ stages:
     cmd: python continue_train.py
     deps:
       - logs/artifacts/init_model/model_init.pth  
-      - ai-vs-human-generated-dataset-hw/   
+      - ai-vs-human-generated-dataset/   
       - continue_train.py
       - utils.py
       - params.yaml
